@@ -1,5 +1,5 @@
 import { motion, useInView, useAnimationControls } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 
 const revealVariants = {
