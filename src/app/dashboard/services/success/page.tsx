@@ -8,10 +8,9 @@ import { transaction } from "../data";
 
 type ServiceSuccessProps = {
   service: string;
-  serviceTxn: Record<string, any>;
 };
 
-function ServiceSuccess({ service = "Data", serviceTxn }: ServiceSuccessProps) {
+function ServiceSuccess({ service = "Data" }: ServiceSuccessProps) {
   return (
     <div className="mx-auto grid h-full min-h-[500px] w-full max-w-[500px] place-items-center">
       <div className="w-full py-4 pb-8 max-sm:my-8 max-sm:px-4">
