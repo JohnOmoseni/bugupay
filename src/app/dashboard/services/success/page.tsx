@@ -6,11 +6,9 @@ import Link from "next/link";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { transaction } from "../data";
 
-type ServiceSuccessProps = {
-  service: string;
-};
+function ServiceSuccess() {
+  const service = undefined;
 
-function ServiceSuccess({ service = "Data" }: ServiceSuccessProps) {
   return (
     <div className="mx-auto grid h-full min-h-[500px] w-full max-w-[500px] place-items-center">
       <div className="w-full py-4 pb-8 max-sm:my-8 max-sm:px-4">
@@ -24,7 +22,7 @@ function ServiceSuccess({ service = "Data" }: ServiceSuccessProps) {
             />
           </div>
           <h3 className="my-3 text-center text-xl font-medium">
-            {service} Purchase successful!
+            {service ?? "Data"} Purchase successful!
           </h3>
         </div>
 
