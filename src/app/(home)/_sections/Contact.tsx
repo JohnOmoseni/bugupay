@@ -11,8 +11,8 @@ const Contact = () => {
         Connect with <span className="text-secondary"> BuguPay</span>
       </h2>
       <p className="p-subtitle">
-        Have questions or need assistance? We're here to help. Feel free to
-        reach out to us through the channels below.
+        Have questions or need assistance? Wen&apos;re here to help. Feel free
+        to reach out to us through the channels below.
       </p>
       <div className="border-border mx-auto mt-16 max-w-[800px] rounded-xl border px-4 py-6 pr-6 shadow-sm sm:p-12">
         <div className="flex-column sm:row-flex gap-6 max-sm:gap-12">
@@ -27,8 +27,8 @@ const Contact = () => {
             <p className="text-snug pt-2 max-sm:max-w-[60ch] max-sm:text-center">
               We value your feedback and are committed to providing excellent
               service. Whether you have a question about our services, need
-              technical support, or want to share your experience, we're here
-              for you.
+              technical support, or want to share your experience, wen&apos;re
+              here for you.
             </p>
             <div className="mt-8">
               <h3 className="mb-6 text-xl text-secondary max-sm:text-center">

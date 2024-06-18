@@ -39,8 +39,12 @@ export default function Dashboard() {
             <div className="row-flex my-2 !justify-start gap-2">
               {Array(4)
                 .fill(null)
-                ?.map((item) => (
-                  <PiAsteriskBold size={36} className="text-foreground" />
+                ?.map((item, idx) => (
+                  <PiAsteriskBold
+                    key={idx}
+                    size={36}
+                    className="text-foreground"
+                  />
                 ))}
             </div>
           )}

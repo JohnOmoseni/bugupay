@@ -50,7 +50,7 @@ function OtpVerify() {
         <FormGroup
           name="digits"
           label="Your 6-digit code"
-          type="text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "
+          type="number"
           required
           value={values.digits}
           errors={errors}
@@ -67,7 +67,7 @@ function OtpVerify() {
         className="group -mt-8 block transition-sm hover:underline"
       >
         <p className="text-center text-base font-medium">
-          I didn't receive a code
+          I didn&apos;t receive a code
         </p>
       </Link>
     </AuthSectionWrapper>
