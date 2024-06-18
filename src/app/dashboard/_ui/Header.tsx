@@ -22,7 +22,7 @@ type HeaderProps = {
 const Header = ({ setOpenMenu }: HeaderProps) => {
   return (
     <header
-      className="relative w-full px-3 py-4 max-sm:shadow-sm sm:px-4"
+      className="relative w-full px-3 py-4 pr-1.5 max-sm:shadow-sm sm:px-4"
       style={{ zIndex: 99 }}
     >
       <div className="row-flex-btwn mx-auto w-[98%] gap-6">

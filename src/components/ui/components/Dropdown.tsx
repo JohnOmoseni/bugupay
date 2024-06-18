@@ -31,7 +31,7 @@ export default function Dropdown({ list, trigger }: DropdownProps) {
       </MenuButton>
       <MenuItems
         anchor="bottom"
-        className="left-0 z-[99] !max-h-[20rem] !max-w-[20rem] overflow-y-auto rounded-md border border-input bg-background shadow-sm"
+        className="left-0 z-[99] !max-h-[20rem] !max-w-[20rem] overflow-y-auto rounded-md border border-input bg-background shadow-sm max-sm:!max-w-[18rem]"
       >
         {links && links.length > 0 ? (
           links.map((link) => (

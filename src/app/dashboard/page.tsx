@@ -9,48 +9,56 @@ import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { PiCurrencyNgnLight } from "react-icons/pi";
 import { PiAsteriskBold } from "react-icons/pi";
+import Image from "next/image";
+import img from "@images/dashboard.png";
 
 export default function Dashboard() {
   const [showBalance, setShowBalance] = useState(false);
 
   return (
-    <div className="w-full px-3 pb-4 sm:px-[3%]">
+    <div className="w-full px-3 sm:px-[3%]">
       <div className="grid min-h-[40vh] items-center py-8 max-sm:px-4">
-        <div>
-          <span className="row-flex ml-1 !justify-start gap-3">
-            Main Balance
-            <span
-              className="icon"
-              onClick={() => setShowBalance((prev) => !prev)}
-            >
-              {showBalance ? (
-                <FaRegEye size={22} className="" />
-              ) : (
-                <FaRegEyeSlash size={22} className="" />
-              )}
+        <div className="row-flex-btwn gap-8">
+          <div className="flex-1">
+            <span className="row-flex ml-1 !justify-start gap-3">
+              Main Balance
+              <span
+                className="icon"
+                onClick={() => setShowBalance((prev) => !prev)}
+              >
+                {showBalance ? (
+                  <FaRegEye size={22} className="" />
+                ) : (
+                  <FaRegEyeSlash size={22} className="" />
+                )}
+              </span>
             </span>
-          </span>
-          {showBalance ? (
-            <h1 className="row-flex !justify-start">
-              <PiCurrencyNgnLight className="mt-1 w-[25px] text-foreground sm:w-[40px]" />
-              100,000
-            </h1>
-          ) : (
-            <div className="row-flex my-2 !justify-start gap-2">
-              {Array(4)
-                .fill(null)
-                ?.map((item, idx) => (
-                  <PiAsteriskBold
-                    key={idx}
-                    size={36}
-                    className="text-foreground"
-                  />
-                ))}
-            </div>
-          )}
-          <p className="ml-1">
-            Reward balance <span className="font-medium">15,000</span>
-          </p>
+            {showBalance ? (
+              <h1 className="row-flex !justify-start sm:text-7xl">
+                <PiCurrencyNgnLight className="mt-1 w-[25px] text-foreground sm:w-[40px]" />
+                100,000
+              </h1>
+            ) : (
+              <div className="row-flex my-2 !justify-start gap-2">
+                {Array(4)
+                  .fill(null)
+                  ?.map((item, idx) => (
+                    <span className="h-[35px] w-[35px] sm:h-[70px] sm:w-[70px]">
+                      <PiAsteriskBold
+                        key={idx}
+                        className="h-full w-full text-foreground"
+                      />
+                    </span>
+                  ))}
+              </div>
+            )}
+            <p className="ml-1">
+              Reward balance <span className="font-medium">15,000</span>
+            </p>
+          </div>
+          <div className="relative mx-auto h-[250px] w-full min-w-[80px] max-w-[350px] max-[400px]:max-h-[120px]">
+            <Image src={img} alt="" fill className="object-contain" />
+          </div>
         </div>
       </div>
 
@@ -79,7 +87,7 @@ export default function Dashboard() {
         </ul>
       </div>
 
-      <div className="mt-10 sm:mt-14">
+      <div className="mt-12 sm:mt-14">
         <div className="row-flex-btwn relative gap-4">
           <h2>Transactions</h2>
           <Link

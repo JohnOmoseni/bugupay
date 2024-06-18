@@ -8,7 +8,7 @@ const GetStarted = () => {
       <div className="grid place-items-center">
         <div className="flex-column !items-center gap-12">
           <div>
-            <h2 className="px-2 text-center">Letn&apos;s get started </h2>
+            <h2 className="px-2 text-center">Let&apos;s get started </h2>
             <p className="p-subtitle">
               Create an account and start paying bills.
             </p>
