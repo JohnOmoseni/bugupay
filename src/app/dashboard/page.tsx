@@ -43,7 +43,10 @@ export default function Dashboard() {
                 {Array(4)
                   .fill(null)
                   ?.map((item, idx) => (
-                    <span className="h-[35px] w-[35px] sm:h-[70px] sm:w-[70px]">
+                    <span
+                      key={idx}
+                      className="h-[35px] w-[35px] sm:h-[70px] sm:w-[70px]"
+                    >
                       <PiAsteriskBold
                         key={idx}
                         className="h-full w-full text-foreground"
