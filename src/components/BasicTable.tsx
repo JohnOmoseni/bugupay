@@ -42,10 +42,10 @@ function BasicTable<TData, TValue>({
   });
 
   return (
-    <div className="relative rounded-lg py-4 sm:p-3">
+    <div className="relative rounded-lg py-4">
       <div className="grid place-items-center overflow-hidden overflow-x-auto rounded-2xl">
-        <table className="border-border w-full max-w-full border-spacing-0 border border-solid max-sm:text-base lg:overflow-hidden">
-          <thead className="border-border rouned-full overflow-hidden border-b-2 bg-orange-600 shadow-md">
+        <table className="w-full max-w-full border-spacing-0 border border-solid border-border max-sm:text-base lg:overflow-hidden">
+          <thead className="rouned-full overflow-hidden border-b-2 border-border bg-orange-600 shadow-md">
             {table.getHeaderGroups().map((headerGroup) => {
               return (
                 <tr key={headerGroup.id} className="">
@@ -77,7 +77,7 @@ function BasicTable<TData, TValue>({
                 return (
                   <tr
                     key={row.id}
-                    className="border-border border-b transition-colors last:border-none even:bg-orange-50"
+                    className="border-b border-border transition-colors last:border-none even:bg-orange-50"
                   >
                     {row.getVisibleCells().map((cell) => {
                       return (
@@ -93,7 +93,7 @@ function BasicTable<TData, TValue>({
                 );
               })
             ) : (
-              <tr className="border-border grid w-full place-items-center border-b-2 transition-colors last:border-none even:bg-orange-50">
+              <tr className="grid w-full place-items-center border-b-2 border-border transition-colors last:border-none even:bg-orange-50">
                 <td className="px-6 py-8 text-center">No results</td>
               </tr>
             )}

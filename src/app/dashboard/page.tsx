@@ -68,7 +68,7 @@ export default function Dashboard() {
       <div className="my-6 sm:my-12">
         <h2 className="text-center">Services</h2>
 
-        <ul className="mx-auto mt-8 grid max-w-[1200px] grid-cols-[repeat(2,_minmax(150px,1fr))] place-items-center gap-x-5 gap-y-8 px-2 sm:gap-12 md:grid-cols-[repeat(3,_minmax(150px,1fr))]">
+        <ul className="mx-auto mt-8 grid max-w-[1200px] grid-cols-[repeat(2,_minmax(150px,1fr))] place-items-center gap-x-5 gap-y-8 sm:gap-12 md:grid-cols-[repeat(3,_minmax(150px,1fr))]">
           {dashboardServices?.map(({ icon: Icon, service, href }, idx) => {
             return (
               <li
@@ -82,7 +82,7 @@ export default function Dashboard() {
                   <div className="row-flex relative mx-auto w-[50px] sm:w-[80px]">
                     <Icon className="h-full w-full !object-contain text-orange-700" />
                   </div>
-                  <h3 className="capitalize transition-colors group-hover:font-bold group-hover:text-secondary">
+                  <h3 className="capitalize transition-sm group-hover:font-bold group-hover:text-secondary">
                     {service}
                   </h3>
                 </Link>
@@ -92,8 +92,8 @@ export default function Dashboard() {
         </ul>
       </div>
 
-      <div className="mt-12 sm:mt-14">
-        <div className="row-flex-btwn relative gap-4 sm:mb-3">
+      <div className="mt-14 sm:px-12">
+        <div className="row-flex-btwn relative gap-4 px-1 sm:mb-2">
           <h3 className="font-semibold sm:text-2xl">Transactions</h3>
           <Link
             href="#"
