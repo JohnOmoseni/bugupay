@@ -2,6 +2,7 @@ import { IconType } from "react-icons/lib";
 import Image from "next/image";
 import { footerLinks, socialLinks } from "@/constants";
 import Link from "next/link";
+import { StickyFooter } from "@/components/anims/StickyFooter";
 
 const Social = ({
   href,
@@ -28,19 +29,19 @@ const Social = ({
 
 const Footer = () => {
   return (
-    <footer className="px-6 pb-5 pt-8 sm:px-[6%] sm:pt-[8%]">
-      <div className="sm:row-flex flex flex-col !items-start justify-evenly gap-12 md:gap-16">
-        <div className="flex-column gap-2 max-sm:mx-auto max-sm:!items-center">
+    <StickyFooter className="px-6 pb-5 pt-8 sm:px-[6%] sm:pt-[8%]">
+      <div className="sm:row-flex flex flex-col !items-start justify-between gap-12 md:gap-[7rem] lg:gap-[10%]">
+        <div className="flex-column w-full gap-3 max-sm:mx-auto max-sm:!items-center">
           <Link href="/" className="block">
             <Image
               src="/svgs/logo-black.svg"
               alt="Bugupay"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               className="!object-contain"
             />
           </Link>
-          <p className="leading-5 max-sm:text-center">
+          <p className="max-w-[25ch] leading-5 max-sm:text-center">
             Your Trusted Partner in Hassle-Free Bill Payments!
           </p>
         </div>
@@ -88,7 +89,7 @@ const Footer = () => {
           {socialLinks?.map((link, idx) => <Social key={idx} {...link} />)}
         </div>
       </div>
-    </footer>
+    </StickyFooter>
   );
 };
 

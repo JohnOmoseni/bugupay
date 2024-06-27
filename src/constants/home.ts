@@ -48,6 +48,27 @@ export const features = [
   },
 ];
 
+export const stats = [
+  {
+    stat: 5000,
+    from: 1000,
+    tag: "Wallets Connected",
+  },
+  {
+    stat: 400,
+    from: 100,
+    tag: "Hours of support",
+  },
+  {
+    stat: 230,
+    tag: "Dedicated workers",
+  },
+  {
+    stat: 2.5,
+    tag: "Estimated value",
+  },
+];
+
 export const services = [
   {
     vector: money,

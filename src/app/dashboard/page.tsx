@@ -68,12 +68,12 @@ export default function Dashboard() {
       <div className="my-6 sm:my-12">
         <h2 className="text-center">Services</h2>
 
-        <ul className="mx-auto mt-6 grid max-w-[1200px] grid-cols-[repeat(2,_minmax(150px,1fr))] place-items-center gap-x-5 gap-y-8 px-2 sm:gap-12 md:grid-cols-[repeat(3,_minmax(150px,1fr))]">
+        <ul className="mx-auto mt-8 grid max-w-[1200px] grid-cols-[repeat(2,_minmax(150px,1fr))] place-items-center gap-x-5 gap-y-8 px-2 sm:gap-12 md:grid-cols-[repeat(3,_minmax(150px,1fr))]">
           {dashboardServices?.map(({ icon: Icon, service, href }, idx) => {
             return (
               <li
                 key={idx}
-                className="badge border-border w-full rounded-xl border px-12 py-10 shadow-sm md:py-12"
+                className="w-full rounded-xl border border-input px-12 py-10 shadow-sm md:py-12"
               >
                 <Link
                   href={href}
@@ -91,8 +91,8 @@ export default function Dashboard() {
       </div>
 
       <div className="mt-12 sm:mt-14">
-        <div className="row-flex-btwn relative gap-4">
-          <h2>Transactions</h2>
+        <div className="row-flex-btwn relative mb-3 gap-4">
+          <h2 className="sm:text-3xl">Transactions</h2>
           <Link
             href="#"
             className="transition-sm hover:text-secondary hover:underline"

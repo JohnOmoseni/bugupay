@@ -3,8 +3,8 @@ import { ReactNode, useEffect, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 
 const revealVariants = {
-  hidden: { opacity: 0, y: 75 },
-  visible: { opacity: 1, y: 0 },
+  initial: { opacity: 0, y: 50 },
+  enter: { opacity: 1, y: 0 },
 };
 
 export type RevealAnimateProps = {
@@ -16,11 +16,11 @@ export type RevealAnimateProps = {
 function RevealAnimate({ children, className, delay }: RevealAnimateProps) {
   const ref = useRef<HTMLDivElement>(null);
   const revealControls = useAnimationControls();
-  const isInView = useInView(ref, { once: false, amount: 0.3 });
+  const isInView = useInView(ref, { once: false, amount: 0.2 });
 
   useEffect(() => {
     if (isInView) {
-      revealControls.start("visible");
+      revealControls.start("animate");
     }
   }, [isInView]);
 
@@ -30,7 +30,7 @@ function RevealAnimate({ children, className, delay }: RevealAnimateProps) {
       variants={revealVariants}
       initial="hidden"
       animate={revealControls}
-      transition={{ duration: 0.6, delay: delay ? delay : 0.3 }}
+      transition={{ duration: 0.7, delay: delay ? delay : 0.3 }}
       className={twMerge("w-full", className)}
     >
       {children}

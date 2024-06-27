@@ -49,8 +49,6 @@
     @apply bg-background text-foreground;
   }
   h1 {
-    /* color: rgba(255, 170, 100, 0.8); */
-    /* color: rgb(234 88 12); */
     @apply text-primaryFont font-bold;
   }
   h2 {

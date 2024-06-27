@@ -28,14 +28,7 @@
 }
 
 /* Background gradients */
-.bg-gradient-100 {
-  /* background: radial-gradient(
-    98.13% 199.7% at 98.13% 100%,
-    #fe6947,
-    #fd366e 41.6%,
-    #fd366e
-  ); */
-}
+
 .bg-gradient-200 {
   background-image: linear-gradient(
     80.52deg,

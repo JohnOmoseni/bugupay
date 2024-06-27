@@ -19,14 +19,19 @@ const FAQ = () => {
         services. Here are some frequently asked questions to guide you.
       </p>
 
-      <div className="faq mx-auto mt-16 w-[90%] max-w-[800px] self-center rounded-xl border border-foreground-300 px-6 pt-3 shadow-sm sm:w-[70%] sm:p-8">
+      <div className="faq mx-auto mt-16 w-[90%] max-w-[700px] self-center rounded-xl border border-foreground-300 px-6 pt-3 shadow-sm sm:p-8">
         {faq.map((item, idx) => (
-          <Accordion type="single" collapsible className="py-6" key={idx}>
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full py-6"
+            key={idx}
+          >
             <AccordionItem
               value={`item-${idx}`}
               className="border-foreground-300"
             >
-              <AccordionTrigger className="max-w-[50ch] break-words text-left">
+              <AccordionTrigger className="max-w-[50ch] break-words text-left sm:w-full">
                 {item?.trigger}
               </AccordionTrigger>
               <AccordionContent>

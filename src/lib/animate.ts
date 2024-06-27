@@ -1,9 +1,29 @@
-export const tabContentVariant = {
-  hidden: {
+export function animateFn(variants: any, custom?: number) {
+  return {
+    initial: "initial",
+    animate: "enter",
+    exit: "exit",
+    transition: { duration: 0.75 },
+    custom,
+    variants,
+  };
+}
+
+export const pageVariant = {
+  initial: {
+    opacity: 0,
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+  },
+  enter: { opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
+  exit: { clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" },
+};
+
+export const slideupVariant = {
+  initial: {
     opacity: 0,
     y: 50,
   },
-  animate: {
+  enter: {
     opacity: 1,
     y: 0,
     transition: {
@@ -13,9 +33,9 @@ export const tabContentVariant = {
   },
 };
 
-export const animateMenu = {
-  hidden: { opacity: 0, x: "100vw" },
-  visible: {
+export const slideinVariant = {
+  initial: { opacity: 0, x: "100vw" },
+  enter: {
     opacity: 1,
     x: 0,
     transition: {
@@ -38,8 +58,8 @@ export const animateMenu = {
 };
 
 export const linksAni = {
-  hidden: { opacity: 0, x: 100 },
-  visible: {
+  initial: { opacity: 0, x: 100 },
+  enter: {
     opacity: 1,
     x: 0,
     transition: {

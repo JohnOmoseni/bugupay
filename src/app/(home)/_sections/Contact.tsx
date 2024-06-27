@@ -14,9 +14,9 @@ const Contact = () => {
         Have questions or need assistance? Wen&apos;re here to help. Feel free
         to reach out to us through the channels below.
       </p>
-      <div className="border-border mx-auto mt-16 max-w-[800px] rounded-xl border px-4 py-6 pr-6 shadow-sm sm:p-12">
+      <div className="mx-auto mt-16 max-w-[1000px] rounded-xl border border-border px-4 py-6 pr-6 shadow-sm sm:p-12">
         <div className="flex-column sm:row-flex gap-6 max-sm:gap-12">
-          <div className="relative mx-auto h-[320px] w-full min-w-[280px] max-w-[350px] max-sm:order-2">
+          <div className="relative mx-auto h-[320px] w-full min-w-[280px] max-w-[400px] max-sm:order-2">
             <Image src={contact} alt="" fill className="!object-contain" />
           </div>
 

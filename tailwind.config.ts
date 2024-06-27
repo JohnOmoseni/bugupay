@@ -27,10 +27,8 @@ const config = {
         input: "hsl(var(--input))",
         ring: "var(--ring)",
         border: {
-          secondary: {
-            DEFAULT: "var(--border-secondary)",
-            100: "var(--border-secondary-100)",
-          },
+          DEFAULT: "var(--border-secondary)",
+          100: "var(--border-secondary-100)",
         },
         background: {
           DEFAULT: "var(--background)",

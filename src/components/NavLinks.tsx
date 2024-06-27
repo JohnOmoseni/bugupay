@@ -1,4 +1,4 @@
-import { linksAni } from "@/lib/animate";
+import { animateFn, linksAni } from "@/lib/animate";
 import { NavLinkProps } from "@/types";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
@@ -14,10 +14,7 @@ function NavLinks({ name, tag, menu, handleClick }: NavLinkProps) {
   };
 
   return (
-    <motion.p
-      variants={menu ? linksAni : undefined}
-      onClick={() => onClick(tag)}
-    >
+    <motion.p {...(menu && animateFn(linksAni))} onClick={() => onClick(tag)}>
       <motion.span
         className={twMerge(
           "cursor-pointer transition-colors transition-sm hover:font-medium hover:text-secondary",

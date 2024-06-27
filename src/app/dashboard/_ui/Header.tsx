@@ -25,7 +25,7 @@ const Header = ({ setOpenMenu }: HeaderProps) => {
       className="relative w-full px-3 py-4 pr-1.5 max-sm:shadow-sm sm:px-4"
       style={{ zIndex: 99 }}
     >
-      <div className="row-flex-btwn mx-auto w-[98%] gap-6">
+      <div className="row-flex-btwn mx-auto gap-6 sm:w-[98%]">
         <Link
           href="/dashboard"
           className="relative transition-sm hover:scale-95"
@@ -38,8 +38,6 @@ const Header = ({ setOpenMenu }: HeaderProps) => {
             className="object-contain"
           />
         </Link>
-
-        <Search />
 
         <div className="row-flex gap-4">
           <div className="row-flex gap-4">
@@ -73,8 +71,8 @@ const Header = ({ setOpenMenu }: HeaderProps) => {
             <AvatarWrapper />
             <div className="flex-column">
               <span className="ml-1">Hi</span>
-              <p className="w-full break-words text-lg font-semibold leading-4">
-                John Omoseni
+              <p className="w-full break-words font-semibold leading-4 sm:text-lg">
+                John <br className="block sm:hidden" /> Omoseni
               </p>
             </div>
           </Link>

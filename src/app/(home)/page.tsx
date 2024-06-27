@@ -12,6 +12,7 @@ import FAQ from "./_sections/FAQ";
 import GetStarted from "./_sections/GetStarted";
 import Footer from "@/app/(home)/_sections/Footer";
 import Contact from "./_sections/Contact";
+import Stats from "./_sections/Stats";
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -24,6 +25,9 @@ export default function Home() {
       </AnimatePresence>
       <Hero />
       <main>
+        <SectionWrapper>
+          <Stats />
+        </SectionWrapper>
         <SectionWrapper id="services">
           <Services />
         </SectionWrapper>

@@ -1,11 +1,11 @@
 "use client";
 
-import { features } from "@/constants";
-import RevealAnimate from "@/components/RevealAnim";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
+import RevealAnimate from "@/components/RevealAnim";
+import { features } from "@/constants";
 import { Button } from "@/components/Button";
+import { twJoin } from "tailwind-merge";
 
 function Features() {
   return (
@@ -36,7 +36,7 @@ function Features() {
                 />
               </div>
               <div
-                className={cn(
+                className={twJoin(
                   `absolute [background:radial-gradient(circle_at_center,_rgba(234,_88,_12,_0.8)_0,_rgba(234,_88,_12,_0)_50%)_no-repeat]`,
                   `left-1/2 top-[-50%] h-[200%] w-[200%] [mix-blend-mode:hard-light]`,
                   `opacity-20`,
