@@ -36,7 +36,7 @@ function Profile() {
                       <span className="font-light capitalize text-gray">
                         {key}:
                       </span>
-                      <p className="font-normal">
+                      <p className="max-w-[30ch] flex-1 self-end break-words text-end font-normal leading-4 sm:max-w-[50ch]">
                         {userProfile[key] ? userProfile[key] : "nil"}
                       </p>
                     </li>
