@@ -16,11 +16,11 @@ export default function Dashboard() {
   const [showBalance, setShowBalance] = useState(false);
 
   return (
-    <div className="w-full px-3 sm:px-[3%]">
+    <div className="w-full px-3 sm:px-14">
       <div className="grid min-h-[40vh] items-center py-8">
         <div className="row-flex-btwn gap-8">
           <div className="flex-1">
-            <span className="row-flex ml-1 !justify-start gap-3">
+            <span className="row-flex ml-2 !justify-start gap-3 max-sm:ml-1">
               Main Balance
               <span
                 className="icon"
@@ -55,11 +55,11 @@ export default function Dashboard() {
                   ))}
               </div>
             )}
-            <p className="ml-1">
+            <p className="ml-2 max-sm:ml-1">
               Reward balance <span className="font-medium">15,000</span>
             </p>
           </div>
-          <div className="relative mx-auto h-[250px] w-full min-w-[80px] max-w-[300px] max-[400px]:max-h-[100px] sm:max-w-[400px]">
+          <div className="relative mx-auto h-[250px] w-full min-w-[80px] max-w-[320px] max-[400px]:max-h-[120px] sm:max-w-[400px]">
             <Image src={img} alt="" fill className="object-contain" />
           </div>
         </div>

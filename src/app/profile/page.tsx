@@ -20,7 +20,7 @@ function Profile() {
         </div>
 
         <div className="my-8 mb-6 rounded-xl border border-foreground-300 shadow-sm">
-          <div className="px-8 py-6">
+          <div className="px-5 py-6 sm:px-8">
             <h3 className="mb-6 text-center font-semibold">My Profile</h3>
 
             <div className="flex-column !items-center">
@@ -36,7 +36,7 @@ function Profile() {
                       <span className="font-light capitalize text-gray">
                         {key}:
                       </span>
-                      <p className="max-w-[30ch] flex-1 self-end break-words text-end font-normal leading-4 sm:max-w-[50ch]">
+                      <p className="max-w-[30ch] flex-1 break-words text-end font-normal leading-4 sm:max-w-[50ch]">
                         {userProfile[key] ? userProfile[key] : "nil"}
                       </p>
                     </li>
