@@ -17,7 +17,7 @@ export default function Dashboard() {
 
   return (
     <div className="w-full px-3 sm:px-[3%]">
-      <div className="grid min-h-[40vh] items-center py-8 max-sm:px-4">
+      <div className="grid min-h-[40vh] items-center py-8">
         <div className="row-flex-btwn gap-8">
           <div className="flex-1">
             <span className="row-flex ml-1 !justify-start gap-3">
@@ -59,7 +59,7 @@ export default function Dashboard() {
               Reward balance <span className="font-medium">15,000</span>
             </p>
           </div>
-          <div className="relative mx-auto h-[250px] w-full min-w-[80px] max-w-[350px] max-[400px]:max-h-[120px]">
+          <div className="relative mx-auto h-[250px] w-full min-w-[80px] max-w-[300px] max-[400px]:max-h-[100px] sm:max-w-[400px]">
             <Image src={img} alt="" fill className="object-contain" />
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Dashboard() {
             return (
               <li
                 key={idx}
-                className="w-full rounded-xl border border-input px-12 py-10 shadow-sm md:py-12"
+                className="group w-full rounded-xl border border-input px-12 py-10 shadow-sm md:py-12"
               >
                 <Link
                   href={href}
@@ -82,7 +82,9 @@ export default function Dashboard() {
                   <div className="row-flex relative mx-auto w-[50px] sm:w-[80px]">
                     <Icon className="h-full w-full !object-contain text-orange-700" />
                   </div>
-                  <h3 className="capitalize">{service}</h3>
+                  <h3 className="capitalize transition-colors group-hover:font-bold group-hover:text-secondary">
+                    {service}
+                  </h3>
                 </Link>
               </li>
             );
@@ -91,8 +93,8 @@ export default function Dashboard() {
       </div>
 
       <div className="mt-12 sm:mt-14">
-        <div className="row-flex-btwn relative mb-3 gap-4">
-          <h2 className="sm:text-3xl">Transactions</h2>
+        <div className="row-flex-btwn relative gap-4 sm:mb-3">
+          <h3 className="font-semibold sm:text-2xl">Transactions</h3>
           <Link
             href="#"
             className="transition-sm hover:text-secondary hover:underline"
