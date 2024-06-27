@@ -17,7 +17,7 @@ function ServiceCard({
   onProceedClick,
 }: ServiceCardProps) {
   return (
-    <div className="mx-auto grid h-full min-h-[500px] w-full max-w-[600px] place-items-center px-3 py-4">
+    <div className="mx-auto grid h-full min-h-[500px] w-full max-w-[600px] place-items-center px-3 pb-4 pt-6">
       <div className="w-full">
         <div className="mb-4 max-w-max pl-1">
           <BackArrow />
