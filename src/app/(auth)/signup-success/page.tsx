@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function SignupSuccess() {
   return (
-    <div className="relative grid h-full w-full place-items-center p-4 max-sm:min-h-[560px] max-sm:pt-8">
+    <div className="relative grid h-full w-full place-items-center p-4 max-sm:min-h-[500px] max-sm:pt-8">
       <div className="flex-column !items-center gap-3">
         <div className="relative h-[200px] w-[200px] max-w-[250px] sm:h-[250px]">
           <Image

@@ -18,18 +18,21 @@ export default function LoadingModal() {
     >
       <Dialog open={true} onClose={() => false}>
         {/* The backdrop, rendered as a fixed sibling to the panel container */}
-        <div className="fixed inset-0 bg-white/80" style={{ zIndex: 999 }} />
+        <div
+          className="pointer-events-auto fixed inset-0 bg-background blur-md"
+          style={{ zIndex: 999 }}
+        />
 
         <Dialog.Panel
-          className="relative grid h-dvh w-full place-items-center"
-          style={{ zIndex: 9999 }}
+          className="fixed top-0 grid h-dvh w-full place-items-center"
+          style={{ zIndex: 999 }}
         >
-          <div className="group absolute left-3 top-3 animate-pulse transition-sm hover:scale-95 sm:left-6 sm:top-5">
+          <div className="group absolute left-3 top-3 hover:scale-95 sm:left-6 sm:top-5">
             <Image
               src="/svgs/logo-full.svg"
               alt="Bugapay"
-              width={35}
-              height={30}
+              width={100}
+              height={100}
               className="object-contain"
             />
           </div>
@@ -38,7 +41,7 @@ export default function LoadingModal() {
             alt="Bugapay"
             width={100}
             height={30}
-            className="object-contain"
+            className="animate-pulse object-contain transition-sm"
           />
         </Dialog.Panel>
       </Dialog>
