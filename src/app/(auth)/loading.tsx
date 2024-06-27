@@ -18,7 +18,7 @@ export default function LoadingModal() {
     >
       <Dialog open={true} onClose={() => false}>
         {/* The backdrop, rendered as a fixed sibling to the panel container */}
-        <div className="absolute inset-0 bg-white/80" style={{ zIndex: 999 }} />
+        <div className="fixed inset-0 bg-white/80" style={{ zIndex: 999 }} />
 
         <Dialog.Panel
           className="relative grid h-dvh w-full place-items-center"

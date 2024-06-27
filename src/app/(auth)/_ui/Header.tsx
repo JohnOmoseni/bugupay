@@ -12,7 +12,7 @@ interface AuthHeaderProps {
 
 const Header = ({ plain, type }: AuthHeaderProps) => {
   return (
-    <header className="relative w-full p-3 sm:px-6 sm:py-4">
+    <header className="relative w-full p-3 pr-2 sm:px-6 sm:py-4">
       <div className="row-flex-btwn gap-6">
         <Link href="#" className="group relative transition-sm hover:scale-95">
           <Image
@@ -24,8 +24,8 @@ const Header = ({ plain, type }: AuthHeaderProps) => {
           />
         </Link>
         {!plain && (
-          <div className="row-flex gap-2.5 pr-1">
-            <span className="text-base font-normal max-sm:text-center max-sm:text-sm">
+          <div className="row-flex gap-2">
+            <span className="text-base font-normal max-sm:text-center max-sm:text-[0.8rem]">
               {type === "signup"
                 ? "Already have an account?"
                 : "New to BuguPay?"}
