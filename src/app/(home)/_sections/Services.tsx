@@ -65,7 +65,7 @@ function Services() {
         designed to make your financial life simpler and more convenient.
       </p>
 
-      <div className="row-flex mx-auto my-10 w-full max-w-[1100px] sm:mt-[5em]">
+      <div className="row-flex mx-auto my-10 w-full max-w-[1100px] max-sm:px-2 sm:mt-[5em]">
         <motion.div
           initial="hidden"
           whileInView="animate"

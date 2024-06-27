@@ -57,14 +57,44 @@ export const slideinVariant = {
   },
 };
 
-export const linksAni = {
-  initial: { opacity: 0, x: 100 },
+export const animateMenu = {
+  initial: { opacity: 0, x: "100vw" },
   enter: {
     opacity: 1,
     x: 0,
     transition: {
-      ease: "easeIn",
+      delay: 0.1,
       duration: 0.8,
+      type: "spring",
+      mass: 0.3,
+      ease: "easeIn",
+      when: "beforeChildren",
+      delayChildren: 0.2,
+      staggerChildren: 0.4,
     },
+  },
+  exit: {
+    x: "100vw",
+    opacity: 0,
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
+  },
+};
+
+export const linksAni = {
+  initial: { opacity: 0, x: 100 },
+  enter: (custom: number) => {
+    return {
+      opacity: 1,
+      x: 0,
+      transition: {
+        ease: "easeIn",
+        delay: custom * 0.3,
+        duration: 0.8,
+        type: "spring",
+      },
+    };
   },
 };

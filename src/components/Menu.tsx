@@ -4,7 +4,7 @@ import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { navLinks } from "@/constants";
 import { Dispatch, SetStateAction } from "react";
-import { slideinVariant, animateFn } from "@/lib/animate";
+import { slideinVariant, animateFn, animateMenu } from "@/lib/animate";
 import MenuLinks from "./NavLinks";
 
 type Props = {
@@ -16,7 +16,7 @@ function Menu({ setOpenMenu }: Props) {
     <motion.div
       style={{ zIndex: 999 }}
       className="fixed inset-0 block h-dvh w-full bg-black/20 backdrop-blur-sm md:hidden"
-      {...animateFn(slideinVariant)}
+      {...animateFn(animateMenu)}
       onClick={() => setOpenMenu(false)}
     >
       <div
@@ -37,6 +37,7 @@ function Menu({ setOpenMenu }: Props) {
               key={idx}
               {...link}
               menu
+              idx={idx}
               handleClick={() => setOpenMenu(false)}
             />
           ))}

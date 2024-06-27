@@ -8,7 +8,7 @@ const Stats = () => {
         {stats?.map((stat, idx) => (
           <li
             key={idx}
-            className="flex-column relative !items-center gap-4 rounded-md border border-input px-8 py-12 after:absolute after:right-0 after:h-[70%] after:w-[2px] after:rounded-full after:bg-border last-of-type:after:h-0 max-lg:after:w-0 max-sm:w-full max-sm:border max-sm:shadow-lg md:px-[4.5rem]"
+            className="flex-column relative !items-center gap-4 rounded-md border border-input px-12 py-12 max-sm:w-full max-sm:min-w-[300px] max-sm:border max-sm:shadow-lg sm:px-8 md:px-[4.5rem]"
           >
             <h3 className="font-mono text-2xl">
               {stat?.tag.includes("Estimated value") ? (

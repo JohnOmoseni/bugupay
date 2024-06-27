@@ -11,6 +11,7 @@ export type NavLinks = {
 export type NavLinkProps = {
   name: string;
   tag: string;
+  idx?: number;
   menu?: boolean;
   handleClick?: () => void;
 };

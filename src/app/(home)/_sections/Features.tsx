@@ -24,7 +24,7 @@ function Features() {
             key={idx}
             className={`${
               idx % 2 === 0 ? " " : "sm:!flex-row-reverse"
-            } flex-column sm:row-flex relative gap-10 max-sm:flex-col-reverse lg:gap-[4em]`}
+            } flex-column sm:row-flex relative gap-14 max-sm:flex-col-reverse lg:gap-[4em]`}
           >
             <RevealAnimate delay={0.8} className="relative">
               <div className="relative mx-auto h-[320px] w-full max-w-[400px] max-sm:min-w-[260px] sm:min-w-[300px]">
