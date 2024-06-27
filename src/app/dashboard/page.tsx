@@ -34,7 +34,7 @@ export default function Dashboard() {
               </span>
             </span>
             {showBalance ? (
-              <h1 className="row-flex !justify-start sm:text-7xl">
+              <h1 className="row-flex !justify-start sm:text-6xl">
                 <PiCurrencyNgnLight className="mt-1 w-[25px] text-foreground sm:w-[40px]" />
                 100,000
               </h1>

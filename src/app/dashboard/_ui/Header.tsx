@@ -39,7 +39,7 @@ const Header = ({ setOpenMenu }: HeaderProps) => {
           />
         </Link>
 
-        <div className="row-flex gap-4">
+        <div className="row-flex gap-6">
           <div className="row-flex gap-4">
             <Dropdown
               trigger={
