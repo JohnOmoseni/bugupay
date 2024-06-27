@@ -39,8 +39,15 @@ function ConfirmTxn() {
 
         <div className="mb-6 flex flex-col items-center">
           <p className="text-center font-semibold">Enter Transaction PIN</p>
-          <div className="row-flex-btwn my-3 gap-4">
-            <div className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full bg-background-200"></div>
+          <div className="row-flex-btwn my-5 gap-6">
+            {Array(4)
+              .fill(null)
+              .map((item, index) => (
+                <div
+                  key={index}
+                  className="relative flex h-5 w-5 shrink-0 overflow-hidden rounded-full bg-background-200"
+                />
+              ))}
           </div>
         </div>
 
