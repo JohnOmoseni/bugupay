@@ -3,7 +3,7 @@ import { NavLinkProps } from "@/types";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
-function NavLinks({ name, tag, menu, handleClick }: NavLinkProps) {
+function NavLinks({ name, tag, menu, idx, handleClick }: NavLinkProps) {
   const navlink = "relative p-1 text-base tracking-snug whitespace-nowrap ";
   const menulink = "";
 
@@ -14,7 +14,10 @@ function NavLinks({ name, tag, menu, handleClick }: NavLinkProps) {
   };
 
   return (
-    <motion.p {...(menu && animateFn(linksAni))} onClick={() => onClick(tag)}>
+    <motion.p
+      {...(menu && animateFn(linksAni, idx))}
+      onClick={() => onClick(tag)}
+    >
       <motion.span
         className={twMerge(
           "cursor-pointer transition-colors transition-sm hover:font-medium hover:text-secondary",

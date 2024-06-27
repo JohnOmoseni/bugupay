@@ -22,10 +22,10 @@ type HeaderProps = {
 const Header = ({ setOpenMenu }: HeaderProps) => {
   return (
     <header
-      className="relative w-full px-3 py-4 pr-1.5 max-sm:shadow-sm sm:px-4"
+      className="relative w-full px-3 py-3 pr-1.5 max-sm:shadow-sm sm:px-4 sm:py-4"
       style={{ zIndex: 99 }}
     >
-      <div className="row-flex-btwn mx-auto gap-6 sm:w-[98%]">
+      <div className="row-flex-btwn mx-auto w-[98%] gap-6">
         <Link
           href="/dashboard"
           className="relative transition-sm hover:scale-95"
@@ -68,9 +68,9 @@ const Header = ({ setOpenMenu }: HeaderProps) => {
           </div>
 
           <Link href="/profile" className="row-flex gap-2">
-            <AvatarWrapper />
-            <div className="flex-column">
-              <span className="ml-1">Hi</span>
+            <AvatarWrapper containerClassName="max-sm:order-2" />
+            <div className="flex-column max-sm:order-1">
+              <span className="ml-1 inline-block w-full">Hi</span>
               <p className="w-full break-words font-semibold leading-4 sm:text-lg">
                 John <br className="block sm:hidden" /> Omoseni
               </p>
